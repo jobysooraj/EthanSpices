@@ -1,5 +1,5 @@
 <!-- Just an image -->
-<nav class="navbar navbar-light bg-light p-1">
+<nav class="navbar navbar-light bg-light p-1 ">
     <a class="navbar-brand" href="#">
         <img src="{{ asset('logo/logo.jpg') }}" width="150" height="100" alt="">
     </a>
