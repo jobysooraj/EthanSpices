@@ -2,7 +2,8 @@
 .cartButton {
     border-radius: 20px;
     border: 1px solid black;
-    position: relative; /* Ensure proper positioning for overlay */
+    position: relative;
+    /* Ensure proper positioning for overlay */
 }
 
 /* Initially display the regular heart icon */
@@ -17,22 +18,27 @@
 
 /* When hovering over the heart button, show filled heart and hide regular */
 .buttonIcon:hover .icon-1 {
-    display: none; /* Hide the regular heart */
+    display: none;
+    /* Hide the regular heart */
 }
 
 .buttonIcon:hover .icon-2 {
-    display: block; /* Show the filled heart */
-    color: #28a745; /* Change color of filled heart */
+    display: block;
+    /* Show the filled heart */
+    color: #28a745;
+    /* Change color of filled heart */
 }
 
 /* Make sure filled heart icon is hidden by default */
 .buttonIcon .icon-2 {
-    color: transparent; /* Make sure it's not visible initially */
+    color: transparent;
+    /* Make sure it's not visible initially */
 }
 
 /* Only display filled heart icon when hovering over the icon itself */
 .buttonIcon:hover .icon-2 {
-    color: #28a745; /* Green color on hover */
+    color: #28a745;
+    /* Green color on hover */
 }
 
 /* Add transition to the icon color for smooth effect */
@@ -61,6 +67,7 @@
 .card .card-img-top {
     transition: opacity 0.5s ease;
 }
+
 .cartBorder {
     border: 0px;
 }
@@ -68,35 +75,65 @@
 .cartBorder:hover {
     border: 1px solid #28a745;
 }
-.homecardBackgroud{
-    background-color:LightGray;
+
+.homecardBackgroud {
+    background-color: LightGray;
 }
+
 .carousel-caption {
-    position: absolute; /* Ensures it overlays the image */
+    position: absolute;
+    /* Ensures it overlays the image */
     top: 40%;
     left: 30%;
-    transform: translate(-50%, -50%); /* Center the caption */
-    text-align: center; /* Center-align text */
+    transform: translate(-50%, -50%);
+    /* Center the caption */
+    text-align: center;
+    /* Center-align text */
 }
 
 .block {
-    position: relative; /* To position the caption */
+    position: relative;
+    /* To position the caption */
 }
 
 .btn-success {
-    margin-top: 20px; /* Adds space above the button */
+    margin-top: 20px;
+    /* Adds space above the button */
 }
-.btnColor{
+
+.btnColor {
     background-color: white;
     border: none;
 }
+
 .btnColor:hover {
-    background-color: #28a745; /* Green color on hover */
+    background-color: #28a745;
+    /* Green color on hover */
     color: white;
 }
 
-.buttonHeadIcon{
+.buttonHeadIcon {
     border: 1px solid black;
     border-radius: 20Px;
     padding: 16px;
+}
+
+.testnomialColor {
+    background-color: #fffbe7;
+}
+
+.testimonial-box {
+    position: relative;
+}
+
+.bi-quote {
+    font-size: 100px;
+    position: absolute;
+    left: -90px;
+    margin-top: -100px;
+}
+.carousel-indicators li {
+    background-color: #40c315 !important;
+    border-color: black !important;
+    border-radius: 30px !important;
 }
