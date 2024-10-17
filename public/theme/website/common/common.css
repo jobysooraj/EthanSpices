@@ -137,3 +137,16 @@
     border-color: black !important;
     border-radius: 30px !important;
 }
+.blogAnchor{
+    text-decoration: underline !important;
+}
+@font-face {
+    font-family: 'AeonikBold';
+    src: url(../fonts/Aeonik-Bold.woff);
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: 'AeonikMedium';
+    src: url(../fonts/Aeonik-Medium.woff);
+    font-weight: normal;
+  }

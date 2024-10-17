@@ -1,7 +1,7 @@
 <!-- Just an image -->
 <nav class="navbar navbar-light bg-light p-1 ">
     <a class="navbar-brand" href="#">
-        <img src="{{ asset('logo/logo.jpg') }}" width="150" height="100" alt="">
+        <img src="{{ asset('logo/logo.jpg') }}" width="150" height="100" alt="ethan-spices-logo">
     </a>
     <div class="m-4">
         <a href="" class="m-4 fs-2 fw-bold">Home</a>

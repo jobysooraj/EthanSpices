@@ -263,7 +263,7 @@
             <div class="col-4 d-flex">
                 <div class="card cartButton w-100 homecardBackgroud">
                     <div class="card-body">
-                        <h3 class="card-subtitle text-center m-5 p-5">10% Off on your First Purchase</h3>
+                        <h3 class="card-subtitle text-center m-5 p-3">10% Off on your First Purchase</h3>
                     </div>
                 </div>
             </div>
@@ -377,16 +377,17 @@
         </div>
 
     </div>
-    {{-- Refresh Your Days --}}
+
     <div class="container px-4 text-center">
         <hr>
     </div>
+    {{-- Refresh Your Days --}}
     <div class="container px-4 mb-3 text-center">
         <div class="row">
             <div class="col-sm-4">
-                <div class="card cartButton h-100">
+                <div class="card cartButton homecardBackgroud h-100">
                     <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
+                        <h5 class="card-title ">Special title treatment</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 
                     </div>
@@ -491,7 +492,7 @@
 
 
     {{-- why Shop with Ethan --}}
-    <div class="container m-5 text-center">
+    <div class="container px-4 m-5 text-center">
         <div class="row gx-5">
             <div class="col">
                 <div class="p-3 d-flex flex-column align-items-center">
@@ -528,7 +529,7 @@
         </div>
     </div>
     {{-- Testimonials --}}
-    <div class="testnomialColor w-100">
+    <div class="testnomialColor px-4 h-75">
         <div class="p-5">
             <h1 class="text-success text-center font-weight-bold">Reviews From Our Customers</h1>
         </div>
@@ -613,63 +614,147 @@
 
     </div>
     {{-- Spice Blog --}}
-    <div class="container px-4 m-3 pt-5">
-        <div class="d-flex flex-row mb-5">
+    <div class="container px-4 mt-5">
+        <div class="d-flex flex-row mb-5 align-items-center">
             <div class="col p-2">
-                <h3 class="text-success font-weight-bold">Spices Blog</h3>
+                <h3 class="text-success fw-bold">Spices Blog</h3>
             </div>
             <div class="d-flex flex-row-reverse">
                 <a href="#" class="btn btn-success cartButton">Read More <i class="bi bi-chevron-right"></i></a>
             </div>
         </div>
+
         <div class="m-5">
-            <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h4>
+            <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
         </div>
-        <div class="card-deck">
-            <div class="card homecardBackgroud cartButton">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                        content. This content is a little bit longer.</p>
-                </div>
 
-            </div>
-            <div class="card homecardBackgroud cartButton">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
-                    </p>
+        <div class="row">
+            <div class="col">
+                <div class="card homecardBackgroud cartButton p-5">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card Subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                    </div>
                 </div>
-
-            </div>
-            <div class="card homecardBackgroud cartButton">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                        content. This card has even longer content than the first to show that equal height action.</p>
+                <div class="p-3">
+                    <h4>August 10, 2024</h4>
+                    <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                    <a href="#" class="blogAnchor">Read More</a>
                 </div>
+            </div>
 
+            <div class="col">
+                <div class="card homecardBackgroud cartButton p-5">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card Subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                    </div>
+                </div>
+                <div class="p-3">
+                    <h4>August 10, 2024</h4>
+                    <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                    <a href="#" class="card-link">Read More</a>
+                </div>
             </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-sm">
-                <h4>August 10,2024</h4>
-                <h3>Lorem ipsum dolor sit amet consectetur </h3>
-                <a href=""><span class="U">Read More</span></a>
-            </div>
-            <div class="col-sm">
-                <h4>August 10,2024</h4>
-                <h3>Lorem ipsum dolor sit amet consectetur </h3>
-                <a href=""><span class="u">Read More</span></a>
-            </div>
-            <div class="col-sm">
-                <h4>August 10,2024</h4>
-                <h3>Lorem ipsum dolor sit amet consectetur </h3>
-                <a href=""><span class="u">Read More</span></a>
+
+            <div class="col">
+                <div class="card homecardBackgroud cartButton p-5">
+                    <div class="card-body">
+                        <h5 class="card-title">Card Title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card Subtitle</h6>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                    </div>
+                </div>
+                <div class="p-3">
+                    <h4>August 10, 2024</h4>
+                    <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                    <a href="#" class="card-link">Read More</a>
+                </div>
             </div>
         </div>
     </div>
-    <div class="container px-4 text-center">
+    <div class="container px-4 mt-5 text-center">
         <hr>
+    </div>
+    {{-- Stay Spiced-up --}}
+    <div class="container px-4 mb-3 text-center">
+        <div class="row align-items-center">
+            <div class="col-sm-4">
+                <div class="card  h-100 border-0">
+                    <div class="card-body">
+                      <div class="d-flex align-content-center flex-wrap">
+                        <h1 class="text-success " >Stay Spice-d up on Instagram</h1>
+                      </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="card  border-0">
+                    <div class="card-body">
+                        <div class="row">
+                            <!-- Card 1 -->
+                            <div class="col-sm">
+                                <div class="card homecardBackgroud cartButton p-3 ">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card Title</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">Card Subtitle</h6>
+                                        <p class="card-text">Some quick example text to build on the card title and make up
+                                            the bulk of the
+                                            card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="col-sm">
+                                <div class="card homecardBackgroud cartButton p-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card Title</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">Card Subtitle</h6>
+                                        <p class="card-text">Some quick example text to build on the card title and make up
+                                            the
+                                            bulk of the
+                                            card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="col-sm">
+                                <div class="card homecardBackgroud cartButton p-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card Title</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">Card Subtitle</h6>
+                                        <p class="card-text">Some quick example text to build on the card title and make up
+                                            the
+                                            bulk of the
+                                            card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="col-sm">
+                                <div class="card homecardBackgroud cartButton p-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card Title</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">Card Subtitle</h6>
+                                        <p class="card-text">Some quick example text to build on the card title and make up
+                                            the
+                                            bulk of the
+                                            card's content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 @endsection
