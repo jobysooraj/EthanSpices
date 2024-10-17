@@ -16,7 +16,7 @@ return new class extends Migration
            $table->string('last_name')->after('first_name')->nullable();
            $table->date('dob')->after('last_name')->nullable();
            $table->date('mobile')->after('email')->nullable();
-           $table->string('role')->after('email')->nullable();
+           $table->string('role')->after('email')->default('user')->nullable();
            $table->softDeletes();
         });
     }

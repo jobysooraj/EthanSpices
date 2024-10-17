@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id(); 
-            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
-            $table->foreignId('subcategory_id')->constrained('subCategories')->onDelete('cascade'); 
+            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade'); // Make sure this exists
+            $table->foreignId('subcategory_id')->constrained('sub_categories')->onDelete('cascade'); 
             $table->foreignId('supplier_id')->constrained('suppliers')->onDelete('cascade'); 
-            $table->foreignId('gsttax_id')->constrained('gsttaxes')->onDelete('cascade'); 
+            $table->foreignId('gsttax_id')->constrained('gst_taxes')->onDelete('cascade'); 
             $table->string('slug')->unique();
             $table->string('name'); 
             $table->decimal('price', 10, 2); 
