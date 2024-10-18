@@ -96,10 +96,10 @@
     /* To position the caption */
 }
 
-.btn-success {
+/* .btn-success {
     margin-top: 20px;
-    /* Adds space above the button */
-}
+  
+} */
 
 .btnColor {
     background-color: white;
@@ -150,3 +150,38 @@
     src: url(../fonts/Aeonik-Medium.woff);
     font-weight: normal;
   }
+  .spacing {
+    letter-spacing: -1px;
+}
+.accordion-button{
+    border: none !important;
+    background-color: white !important;
+}
+.page-link {
+    color: #40c315 !important;
+    border: none;
+}
+.page-item.active .page-link {
+    background-color: white;
+}
+.bulkInput{
+    line-height: 3.5 !important;
+    border-radius: 1.25rem !important;
+
+}
+.btnSendRequest{
+    width: -webkit-fill-available !important;
+    border-radius: 14px !important;
+    background-color: #28a745 !important;
+    color: white !important;
+}
+.hero-section {
+    background-image: url(../img/banner/idukki.jpeg);
+    background-color: transparent;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    padding-top: 170px;
+    padding-bottom: 130px;
+ 
+}

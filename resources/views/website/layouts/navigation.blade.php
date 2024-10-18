@@ -4,11 +4,11 @@
         <img src="{{ asset('logo/logo.jpg') }}" width="150" height="100" alt="ethan-spices-logo">
     </a>
     <div class="m-4">
-        <a href="" class="m-4 fs-2 fw-bold">Home</a>
-        <a href="" class="m-4 fs-2 fw-bold">Shop By</a>
+        <a href="{{route('websitelogin')}}" class="m-4 fs-2 fw-bold">Home</a>
+        <a href="{{route('websiteshopBy')}}" class="m-4 fs-2 fw-bold">Shop By</a>
         <a href="" class="m-4 fs-2 fw-bold">Combo & Gifts</a>
-        <a href="" class="m-4 fs-2 fw-bold">Bulk Orders</a>
-        <a href="" class="m-4 fs-2 fw-bold">Our Story</a>
+        <a href="{{route('websitebulkOrder')}}" class="m-4 fs-2 fw-bold">Bulk Orders</a>
+        <a href="{{route('websiteaboutUs')}}" class="m-4 fs-2 fw-bold">Our Story</a>
         <a href="" class="m-4 fs-2 fw-bold">Blog</a>
         <a href="" class="m-4 fs-2 fw-bold">Contact</a>
     </div>

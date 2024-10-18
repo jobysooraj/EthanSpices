@@ -1,13 +1,11 @@
 <!-- footer section start -->
 <section class="footer">
-
-
-    <div class="footer-bottom pt-77 bg-success text-bg-light" >
+    <div class="footer-bottom pt-77 bg-success text-bg-light">
         <div class="container">
             <div class="footer-bottom-wrapper">
                 <div class="footer-bottom-primary pb-60">
                     <div class="row align-items-center">
-                        <div class="col-xl-5 col-lg-5 col-md-9">
+                        <div class="col">
                             <div class="footer-item has-desc">
                                 <div class="footer-logo ">
                                     <img src="{{ asset('logo/logo.jpg') }}" width="150" height="100"
@@ -15,7 +13,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-7 col-lg-7 col-md-12">
+                        <div class="col">
                             <div class="row">
                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6">
                                     <div class="footer-menu">
@@ -32,7 +30,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-6">
+                                <div class="col">
                                     <div class="footer-menu">
                                         <ul>
                                             <li><a href="javascript:void(0)" class="title">Help</a></li>
@@ -45,13 +43,17 @@
                                     </div>
                                 </div>
 
-                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 hidden-sm">
+                                <div class="col">
                                     <div class="footer-menu">
                                         <ul>
                                             <li><a href="javascript:void(0)" class="title">Connect </a></li>
-                                            <a href="javascript:void(0)"><i class="fab fa-facebook-f p-2"></i></a>
-                                            <a href="javascript:void(0)"><i class="fab fa-instagram p-2"></i></a>
-                                            <a href="javascript:void(0)"><i class="fab fa-whatsapp p-2"></i></a>
+                                            <a href="#" class="text-light fs-2 me-3"><i
+                                                    class="bi bi-facebook"></i></a>
+                                            <a href="#" class="text-light fs-2 me-3"><i
+                                                    class="bi bi-pinterest"></i></a>
+                                            <a href="#" class="text-light fs-2 me-3"><i
+                                                    class="bi bi-instagram"></i></a>
+                                            <a href="#" class="text-light fs-2"><i class="bi bi-linkedin"></i></a>
                                         </ul>
                                     </div>
                                 </div>
@@ -60,7 +62,7 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center ">
+            <div class="text-center m-5">
                 <p class="text-white">Copyright {{ now()->year }} &copy; Ethan Spices</p>
             </div>
         </div>
