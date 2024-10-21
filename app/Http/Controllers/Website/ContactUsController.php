@@ -1,18 +1,18 @@
 <?php
 
 namespace App\Http\Controllers\Website;
-use App\Http\Controllers\Controller;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ShopByController extends Controller
+class ContactUsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-       return view('website.shopby');
+       return view('website.contactus');
     }
 
     /**
@@ -34,10 +34,9 @@ class ShopByController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show()
+    public function show(string $id)
     {
-        // string $id
-        return view('website.product');
+        //
     }
 
     /**
@@ -62,14 +61,5 @@ class ShopByController extends Controller
     public function destroy(string $id)
     {
         //
-    }
-    public function shopBySpices() {
-        return view('website.spices');
-    }
-    public function shopByTea() {
-        return view('website.tea');
-    }
-    public function shopByCoffee() {
-        return view('website.coffee');
     }
 }

@@ -3,7 +3,7 @@
     <div class="card bg-dark ">
         <img src="{{ asset('banner/idukki.jpeg') }}" class="card-img img-cover" alt="spices-online" height="325">
         <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <h1 class="card-title text-white">All Product</h1>
+            <h1 class="card-title text-white">All Coffee Products</h1>
 
         </div>
     </div>
@@ -207,7 +207,6 @@
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a href="{{ route('websiteproduct') }}">
                         <div class="card h-100 cartButton cartBorder">
                             <img src="{{ asset('banner/pepper.jfif') }}" class="card-img-top p-2" alt="...">
                             <div class="overlay">
@@ -224,10 +223,8 @@
                                 <a href="#" class="btn btn-success cartButton"><i class="bi bi-cart fs-1"></i> Add to Cart</a>
                             </div>
                         </div>
-                        </a>
                     </div>
                     <div class="col-md-4">
-                        <a href="{{ route('websiteproduct') }}">
                         <div class="card h-100 cartButton cartBorder">
                             <img src="{{ asset('banner/pepper.jfif') }}" class="card-img-top p-2" alt="...">
                             <div class="overlay">
@@ -244,7 +241,6 @@
                                 <a href="#" class="btn btn-success cartButton"><i class="bi bi-cart fs-1"></i> Add to Cart</a>
                             </div>
                         </div>
-                        </a>
                     </div>
                     <div class="col-md-4">
                         <div class="card h-100 cartButton cartBorder">
