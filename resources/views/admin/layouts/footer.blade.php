@@ -19,7 +19,7 @@
             </div>
             <div class="col-4 text-end">
                 <p class="mb-0">
-                    &copy; 2022 - <a href="dashboard-default.html" class="text-muted">Spark</a>
+                    &copy; {{ date('Y') }} - <a href="dashboard-default.html" class="text-muted">Ethan Spices</a>
                 </p>
             </div>
         </div>

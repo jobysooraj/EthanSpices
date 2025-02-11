@@ -3,7 +3,7 @@
   <div class="container-fluid">
       <div class="row">
           <div class="col-md-4 col-6"><i class="fa fa-phone"></i><a class="call-text"
-                  href="tel:+919495637368">+919495637368</a></div>
+                  href="tel:+919495637368">+919495637268</a></div>
           <div class="col-md-4 col-6 text-center hidden-sm hidden-md"><i class="fa fa-envelope"></i><a
                   class="call-text" href="mailto:ethanspicesofficial@gmail.com">ethanspicesofficial@gmail.com
                 </a></div>

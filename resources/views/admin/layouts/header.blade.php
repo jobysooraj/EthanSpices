@@ -3,9 +3,9 @@
         <i class="hamburger align-self-center"></i>
     </a>
 
-    <form class="d-none d-sm-inline-block">
+    {{-- <form class="d-none d-sm-inline-block">
         <input class="form-control form-control-lite" type="text" placeholder="Search projects...">
-    </form>
+    </form> --}}
 
     <div class="navbar-collapse collapse">
         <ul class="navbar-nav ms-auto">
@@ -147,7 +147,11 @@
                     <a class="dropdown-item" href="#"><i class="align-middle me-1 fas fa-fw fa-chart-pie"></i> Analytics</a>
                     <a class="dropdown-item" href="#"><i class="align-middle me-1 fas fa-fw fa-cogs"></i> Settings</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#"><i class="align-middle me-1 fas fa-fw fa-arrow-alt-circle-right"></i> Sign out</a>
+                    {{-- <a class="dropdown-item" href="#"><i class="align-middle me-1 fas fa-fw fa-arrow-alt-circle-right"></i> Sign out</a> --}}
+                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                    <a class="dropdown-item" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="align-middle me-1 fas fa-fw fa-arrow-alt-circle-right"></i>Sign out</a>
                 </div>
             </li>
         </ul>
