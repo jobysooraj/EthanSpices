@@ -22,6 +22,35 @@
                 </a>
 
             </li>
+             <li class="sidebar-item">
+                <a data-bs-target="#gst" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                    <i class="align-middle me-2 fas fa-fw fa-flask"></i> <span class="align-middle">GST</span>
+                </a>
+                <ul id="gst" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                    <li class="sidebar-item"><a class="sidebar-link" href="{{route('taxes.index')}}">List</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="{{route('taxes.create')}}">Add</a></li>
+
+                </ul>
+            </li>
+             <li class="sidebar-item">
+                <a data-bs-target="#units" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                    <i class="align-middle me-2 fas fa-fw fa-flask"></i> <span class="align-middle">Units</span>
+                </a>
+                <ul id="units" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                    <li class="sidebar-item"><a class="sidebar-link" href="{{route('units.index')}}">List</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="{{route('units.create')}}">Add</a></li>
+
+                </ul>
+            </li>
+             <li class="sidebar-item">
+                <a data-bs-target="#Suppliers" data-bs-toggle="collapse" class="sidebar-link collapsed">
+                    <i class="align-middle me-2 fas fa-fw fa-table"></i> <span class="align-middle">Suppliers</span>
+                </a>
+                <ul id="Suppliers" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
+                    <li class="sidebar-item"><a class="sidebar-link" href="{{route('suppliers.index')}}">Lists</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="{{route('suppliers.create')}}">Add</a></li>
+                </ul>
+            </li>
             <li class="sidebar-item">
                 <a data-bs-target="#pages" data-bs-toggle="collapse" class="sidebar-link collapsed">
                     <i class="align-middle me-2 fas fa-fw fa-file"></i> <span class="align-middle">Categories</span>
@@ -37,8 +66,8 @@
                     <i class="align-middle me-2 fas fa-fw fa-sign-in-alt"></i> <span class="align-middle">Products</span>
                 </a>
                 <ul id="auth" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-                    <li class="sidebar-item"><a class="sidebar-link" href="pages-sign-in.html">Lists</a></li>
-                    <li class="sidebar-item"><a class="sidebar-link" href="pages-sign-up.html">Add</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="{{route('products.index')}}">Lists</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="{{route('products.create')}}">Add</a></li>
                 </ul>
             </li>
             <li class="sidebar-item">
@@ -51,34 +80,15 @@
                 </ul>
             </li>
 
-            <li class="sidebar-item">
-                <a data-bs-target="#units" data-bs-toggle="collapse" class="sidebar-link collapsed">
-                    <i class="align-middle me-2 fas fa-fw fa-flask"></i> <span class="align-middle">Units</span>
-                </a>
-                <ul id="units" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-                    <li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">List</a></li>
-                    <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Add</a></li>
-
-                </ul>
-            </li>
-			  <li class="sidebar-item">
-                <a data-bs-target="#gst" data-bs-toggle="collapse" class="sidebar-link collapsed">
-                    <i class="align-middle me-2 fas fa-fw fa-flask"></i> <span class="align-middle">GST</span>
-                </a>
-                <ul id="gst" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-                    <li class="sidebar-item"><a class="sidebar-link" href="ui-alerts.html">List</a></li>
-                    <li class="sidebar-item"><a class="sidebar-link" href="ui-buttons.html">Add</a></li>
-
-                </ul>
-            </li>
+           
             <li class="sidebar-item">
                 <a data-bs-target="#discounts" data-bs-toggle="collapse" class="sidebar-link collapsed">
                     <i class="align-middle me-2 fas fa-fw fa-chart-pie"></i> <span class="align-middle">Discounts</span>
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                 </a>
                 <ul id="discounts" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-                    <li class="sidebar-item"><a class="sidebar-link" href="charts-chartjs.html">List</a></li>
-                    <li class="sidebar-item"><a class="sidebar-link" href="charts-apexcharts.html">Add</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="{{route('discounts.index')}}">List</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="{{route('discounts.create')}}">Add</a></li>
                 </ul>
             </li>
             <li class="sidebar-item">
@@ -87,8 +97,8 @@
                     <span class="sidebar-badge badge rounded-pill bg-primary">New</span>
                 </a>
                 <ul id="promocodes" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-                    <li class="sidebar-item"><a class="sidebar-link" href="charts-chartjs.html">List</a></li>
-                    <li class="sidebar-item"><a class="sidebar-link" href="charts-apexcharts.html">Add</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="{{route('promocodes.index')}}">List</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="{{route('promocodes.create')}}">Add</a></li>
                 </ul>
             </li>
 
@@ -102,7 +112,7 @@
 
                 </ul>
             </li>
-			 <li class="sidebar-item">
+            <li class="sidebar-item">
                 <a data-bs-target="#stocks" data-bs-toggle="collapse" class="sidebar-link collapsed">
                     <i class="align-middle me-2 fas fa-fw fa-check-square"></i> <span class="align-middle">Stock</span>
                 </a>
@@ -120,16 +130,8 @@
                     <li class="sidebar-item"><a class="sidebar-link" href="tables-datatables-responsive.html">Lists</a></li>
                 </ul>
             </li>
-			<li class="sidebar-item">
-                <a data-bs-target="#Suppliers" data-bs-toggle="collapse" class="sidebar-link collapsed">
-                    <i class="align-middle me-2 fas fa-fw fa-table"></i> <span class="align-middle">Suppliers</span>
-                </a>
-                <ul id="Suppliers" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-                    <li class="sidebar-item"><a class="sidebar-link" href="tables-datatables-responsive.html">Lists</a></li>
-                    <li class="sidebar-item"><a class="sidebar-link" href="tables-datatables-responsive.html">Add</a></li>
-                </ul>
-            </li>
-			
+          
+
             <li class="sidebar-item">
                 <a data-bs-target="#testimonials" data-bs-toggle="collapse" class="sidebar-link collapsed">
                     <i class="align-middle me-2 fas fa-fw fa-heart"></i> <span class="align-middle">Testimonials</span>

@@ -12,11 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-           $table->string('first_name')->after('name');
+           $table->string('first_name')->after('name')->nullable();
            $table->string('last_name')->after('first_name')->nullable();
            $table->date('dob')->after('last_name')->nullable();
            $table->date('mobile')->after('email')->nullable();
-           $table->string('role')->after('email')->default('user')->nullable();
+           $table->string('role')->after('email')->default('User');
+           $table->string('status')->after('mobile')->default('active');
            $table->softDeletes();
         });
     }
@@ -32,6 +33,7 @@ return new class extends Migration
            $table->dropColumn('dob');
            $table->dropColumn('mobile');
            $table->dropColumn('role');
+           $table->dropColumn('status');
            $table->dropSoftDeletes();
         });
     }

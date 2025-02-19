@@ -18,14 +18,16 @@
                     <h5 class="card-title mb-0">Categories</h5>
                 </div>
                 <div class="card-body">
-                    <table id="datatables-categories" class="table table-striped" style="width:100%">
+                    <table id="datatables-categories" class="table table-striped" style="width:100%" data-url="{{ route('categories.index') }}">
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>Code</th>
+                                <th>Image</th>
                                 <th>Name</th>
-                                <th>Company</th>
-                                <th>Email</th>
+                                <th>Description</th>
                                 <th>Status</th>
+                                <th>action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -55,16 +57,17 @@
                             </div>
                         </div>
                     </div>
-                    <h5 class="card-title mb-0">Angelica Ramos</h5>
+                    <h5 class="card-title mb-0">Category</h5>
                 </div>
                 <div class="card-body">
                     <div class="row g-0">
                         <div class="col-sm-3 col-xl-12 col-xxl-4 text-center">
-                            <img src="img/avatars/avatar-3.jpg" width="64" height="64" class="rounded-circle mt-2" alt="Angelica Ramos">
+                            <img id="category_image" width="64" height="64" class="rounded-circle mt-2" alt="">
                         </div>
                         <div class="col-sm-9 col-xl-12 col-xxl-8">
-                            <strong>About me</strong>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+                            <strong>Description</strong>
+                            <p id="short_description"></p>
+                            <p id="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
                                 sociis
                                 natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
                         </div>
@@ -73,32 +76,16 @@
                     <table class="table table-sm my-2">
                         <tbody>
                             <tr>
-                                <th>Name</th>
-                                <td>Charissa Hilt</td>
+                                <th>Code</th>
+                                <td id="slug">Charissa Hilt</td>
                             </tr>
                             <tr>
-                                <th>Company</th>
-                                <td>Matrix Interior Design</td>
-                            </tr>
-                            <tr>
-                                <th>Occupation</th>
-                                <td>Desktop publisher</td>
-                            </tr>
-                            <tr>
-                                <th>Email</th>
-                                <td>charissahilt@rhyta.com</td>
-                            </tr>
-                            <tr>
-                                <th>Phone</th>
-                                <td>+1234123123123</td>
-                            </tr>
-                            <tr>
-                                <th>Website</th>
-                                <td>hispanomarketer.com</td>
+                                <th>Category</th>
+                                <td id="category_name">Matrix Interior Design</td>
                             </tr>
                             <tr>
                                 <th>Status</th>
-                                <td><span class="badge bg-success">Active</span></td>
+                                <td id="status"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -108,4 +95,10 @@
     </div>
     </div>
 </main>
+@endsection
+@section('scripts')
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="{{ asset('js/category.js') }}"></script>
+
 @endsection

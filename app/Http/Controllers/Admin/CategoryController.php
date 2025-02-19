@@ -32,9 +32,16 @@ class CategoryController extends Controller
         ];
         if ($request->ajax()) {
             $categories = $this->categoryService->getAllCategories();
-    
+            
             return DataTables::of($categories)
                 ->addIndexColumn() // Adds an index column if needed
+                ->addColumn('image', function ($row) {
+                    $imageUrl = asset('storage/'.$row->image); // Adjust path based on storage
+                    return '<img src="'.$imageUrl.'" alt="Category Image" width="50" height="50" />';
+                })
+                ->addColumn('status', function ($row) {
+                    return $row->status ? '<span class="badge bg-success">Active</span>' : '<span class="badge bg-danger">Inactive</span>';
+                })
                 ->addColumn('action', function ($row) {
                     return '<a href="'.route('categories.edit', $row->id).'" class="btn btn-primary btn-sm">Edit</a>
                             <form action="'.route('categories.destroy', $row->id).'" method="POST" style="display:inline;">
@@ -43,7 +50,7 @@ class CategoryController extends Controller
                                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                             </form>';
                 })
-                ->rawColumns(['action']) // Allows HTML rendering in the action column
+                ->rawColumns(['action','image','status']) // Allows HTML rendering in the action column
                 ->make(true);
         }
     
@@ -113,7 +120,12 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        return view('admin.categories.edit', compact('category'));
+        $breadcrumbs = [
+            ['name' => 'Dashboard', 'url' => route('admin.home')],
+            ['name' => 'Categories', 'url' => route('categories.index')],
+            ['name' => 'Edit', 'url' => null] // Null for the current page
+        ];
+        return view('admin.categories.edit', compact('category','breadcrumbs'));
 
     }
 

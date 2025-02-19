@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('gst_taxes', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->integer('percentage');
             $table->timestamps(); 
             $table->softDeletes();
