@@ -40,4 +40,8 @@ class Product extends Model
     {
         return $this->belongsTo(GstTax::class,'gsttax_id','id');
     }
+    public function combos()
+    {
+        return $this->belongsToMany(Combo::class, 'combo_product');
+    }
 }

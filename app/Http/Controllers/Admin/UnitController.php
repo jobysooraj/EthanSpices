@@ -152,4 +152,14 @@ class UnitController extends Controller
         }
 
     }
+    public function getConversionFactor(Request $request)
+    {
+        $unit = Unit::find($request->unit_id);
+
+        if (!$unit) {
+            return response()->json(['success' => false, 'message' => 'Unit not found.']);
+        }
+
+        return response()->json(['success' => true, 'conversion_factor' => $unit->title]);
+    }
 }

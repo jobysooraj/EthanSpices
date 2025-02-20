@@ -76,7 +76,7 @@ class LoginController extends Controller
         $request->session()->regenerateToken();
     
        // Redirect to login with no cache headers
-    return redirect()->route('home')->with('success', 'You have been logged out successfully.')
+    return redirect()->route('/')->with('success', 'You have been logged out successfully.')
     ->withHeaders([
         'Cache-Control' => 'no-store, no-cache, must-revalidate, max-age=0',
         'Pragma' => 'no-cache',

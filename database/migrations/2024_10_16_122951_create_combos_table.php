@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('combos', function (Blueprint $table) {
             $table->id(); // Auto-incrementing primary key
-            $table->foreignId('product_id')->constrained('products')->onDelete('cascade'); // Foreign key to products
             $table->foreignId('gsttax_id')->constrained('gst_taxes')->onDelete('cascade');
-            $table->decimal('product_price', 10, 2); // Product price (10 digits total, 2 after decimal)
+            $table->string('code');
+            $table->string('name');
             $table->decimal('combo_price', 10, 2); // Combo price (10 digits total, 2 after decimal)
             $table->text('description')->nullable(); // Description (nullable)
             $table->boolean('status')->default(true); // Status (boolean) with a default value

@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\SupplierController;
 use App\Http\Controllers\Admin\DiscountController;
 use App\Http\Controllers\Admin\PromocodeController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\ComboController;
 
 use App\Http\Controllers\Website\ShopByController;
 use App\Http\Controllers\Website\BulkOrderController;
@@ -21,7 +22,7 @@ use App\Http\Controllers\Website\ContactUsController;
 Route::get('/welcome', function () {
     return view('welcome');
 });
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index']);
 
 Route::middleware(['auth', 'user-access:Admin','NoBackAfterLogout'])->group(function () {
   
@@ -33,7 +34,8 @@ Route::middleware(['auth', 'user-access:Admin','NoBackAfterLogout'])->group(func
     Route::resource('suppliers', SupplierController::class);
     Route::resource('discounts', DiscountController::class);
     Route::resource('promocodes',PromocodeController::class);
-    
+    Route::resource('combos',ComboController::class);
+
     //Route::get('products/import', [ProductImportController::class, 'showForm']);
     // Route::post('products/import', [ProductImportController::class, 'import'])->name('products.import');
     // Route::resource('coupons', CouponController::class);

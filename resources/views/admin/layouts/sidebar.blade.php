@@ -75,8 +75,8 @@
                     <i class="align-middle me-2 fas fa-fw fa-book"></i> <span class="align-middle">Combos</span>
                 </a>
                 <ul id="documentation" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-                    <li class="sidebar-item"><a class="sidebar-link" href="docs-getting-started.html">List</a></li>
-                    <li class="sidebar-item"><a class="sidebar-link" href="docs-plugins.html">Add</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="{{route('combos.index')}}">List</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="{{route('combos.create')}}">Add</a></li>
                 </ul>
             </li>
 

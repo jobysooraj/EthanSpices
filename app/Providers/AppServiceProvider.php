@@ -17,6 +17,8 @@ use App\Repositories\PromocodeRepositoryInterface;
 use App\Repositories\PromocodeRepository;
 use App\Repositories\ProductRepositoryInterface;
 use App\Repositories\ProductRepository;
+use App\Repositories\ComboRepositoryInterface;
+use App\Repositories\ComboRepository;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -32,6 +34,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(DiscountRepositoryInterface::class, DiscountRepository::class);
         $this->app->bind(PromocodeRepositoryInterface::class, PromocodeRepository::class);
         $this->app->bind(ProductRepositoryInterface::class, ProductRepository::class);
+        $this->app->bind(ComboRepositoryInterface::class, ComboRepository::class);
 
     }
 
