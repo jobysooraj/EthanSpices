@@ -22,16 +22,15 @@ class ComboRequest extends FormRequest
     public function rules(): array
     {
         $comboId = $this->route('combo') ? $this->route('combo')->id : null;
-
         return [
-            'product_id'    => 'required|array',
-            'product_id.*'  => 'exists:products,id',
-            'gsttax_id'     => 'required|exists:gst_taxes,id',
-            'name'          => 'required|string|max:255',
-            'combo_price'   => 'required|numeric|min:0',
-            'description'   => 'nullable|string',
-            'status'        => 'required|boolean',
-            'image'         => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'product_id'    => 'required|array|min:1',  // Ensure at least one product is selected
+            'product_id.*'  => 'exists:products,id',     // Validate each product ID
+            'gsttax_id'     => 'required|exists:gst_taxes,id', // Validate GST Tax
+            'name'          => 'required|string|max:255', // Ensure name is provided and max length is 255
+            'combo_price'   => 'required|numeric|min:0', // Ensure combo price is a valid number and not negative
+            'description'   => 'nullable|string', // Optional but must be a string if provided
+            'status'        => 'required|boolean',  // Ensure status is either true or false
+            'image'         => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Optional image with validation
         ];
     }
 }

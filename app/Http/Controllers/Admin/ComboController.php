@@ -48,6 +48,11 @@ class ComboController extends Controller
                     $imageUrl = asset('storage/'.$row->image); // Adjust path based on storage
                     return '<img src="'.$imageUrl.'" alt="Category Image" width="50" height="50" />';
                 })
+                ->addColumn('products', function ($row) {
+                    // Retrieve the names of products associated with the combo
+                    $productNames = $row->products->pluck('name')->toArray();
+                    return implode(', ', $productNames); // Display product names as a comma-separated string
+                })
                 ->addColumn('status', function ($row) {
                     return $row->status ? '<span class="badge bg-success">Active</span>' : '<span class="badge bg-danger">Inactive</span>';
                 })
@@ -92,25 +97,34 @@ class ComboController extends Controller
         try {
             // Validate request data
             $data = $request->validated();
+    
+            // Handle image upload
             if ($request->hasFile('image')) {
-                $file           = $request->file('image');
-                $filename       = time() . '.' . $file->getClientOriginalExtension();
-                $filePath       = $file->storeAs('combos', $filename, 'public');
-                $data['image']  = $filePath;
+                $file = $request->file('image');
+                $filename = time() . '.' . $file->getClientOriginalExtension();
+                $filePath = $file->storeAs('combos', $filename, 'public');
+                $data['image'] = $filePath;
             }
-
+    
+            // Generate unique combo code
             $data['code'] = $this->generateUniqueComboCode($data['name']);
-            $combo        = $this->comboService->createCombo($data);
-            $productIds   = (array) $request->product_id;
-            $combo->products()->sync($productIds);
-
+    
+            // Save combo data (without product_id)
+            $combo = $this->comboService->createCombo($data);
+    
+            // Get the product IDs from the request and associate with the combo
+            $productIds = $request->product_id; // This is an array of product IDs
+            $combo->products()->sync($productIds); // Sync the product relationships with the combo
+    
             DB::commit();
+    
             return redirect()->route('combos.index')->with('success', 'Combo created successfully!');
         } catch (\Exception $e) {
             DB::rollBack();
             return redirect()->back()->withErrors('Error creating Combo. Please try again.');
         }
     }
+    
 
     public function generateUniqueComboCode($name)
     {

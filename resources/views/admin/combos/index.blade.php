@@ -26,8 +26,6 @@
                                 <th>Code</th>
                                 <th>Name</th>
                                 <th>Products</th>
-                                <th>Units</th>
-                                <th>Product Price</th>
                                 <th>Combo Price</th>
                                 <th>Description </th>
                                 <th>action</th>
@@ -92,10 +90,7 @@
                                 <th>Gst </th>
                                 <td id="gst_amount">Matrix Interior Design</td>
                             </tr>
-                           <tr>
-                                <th>Product Price</th>
-                                <td id="product_price">Matrix Interior Design</td>
-                            </tr>
+                           
                              <tr>
                                 <th>Combo Price </th>
                                 <td id="price">Matrix Interior Design</td>

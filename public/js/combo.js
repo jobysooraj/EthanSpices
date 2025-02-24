@@ -16,8 +16,7 @@ $(document).ready(function() {
                 { data: 'code', name: 'code' },
                 { data: 'name', name: 'name' },
                 { data: 'products', name: 'products'},
-                { data: 'units', name: 'units' },
-                { data: 'product_price', name: 'product_price' },
+                
                 { data: 'combo_price', name: 'combo_price' },
                 { data: 'description', name: 'description' },
                 { data: 'action', name: 'action', orderable: false, searchable: false }
@@ -45,7 +44,6 @@ $(document).ready(function() {
                 $('#combo_name').text(rowData.name || 'N/A');
                 $('#product_name').text(rowData.products ? rowData.products.join(', ') : 'N/A');
                 $('#gst_amount').text(rowData.gst_amount || 'N/A');
-                $('#product_price').text(rowData.product_price || 'N/A');
                 $('#price').text(rowData.combo_price || 'N/A');
 
                 // Populate status safely

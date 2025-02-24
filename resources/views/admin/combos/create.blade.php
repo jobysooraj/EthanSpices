@@ -66,6 +66,7 @@
                             </div>
 
                             <!-- Status -->
+                            <!-- Status -->
                             <div class="mb-3">
                                 <label class="form-label">Status</label>
                                 <div>
@@ -80,6 +81,7 @@
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
+
 
                             <!-- Image Upload -->
                             <div class="mb-3">
