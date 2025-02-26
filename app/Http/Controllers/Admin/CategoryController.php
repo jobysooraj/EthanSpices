@@ -175,4 +175,8 @@ class CategoryController extends Controller
         }
 
     }
+    public function getProducts(Category $category)
+    {
+        return response()->json($category->products);
+    }
 }

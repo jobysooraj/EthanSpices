@@ -8,7 +8,7 @@ class ComboRepository implements ComboRepositoryInterface
 {
     public function all()
     {
-        return Combo::all();
+        return Combo::with('products','gstTax')->get();
     }
 
     public function find($id)

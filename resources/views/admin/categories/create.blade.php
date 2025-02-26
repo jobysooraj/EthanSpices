@@ -54,3 +54,7 @@
     </div>
 </main>
 @endsection
+@section('scripts')
+<script src="{{ asset('js/stock.js') }}"></script>
+
+@endsection

@@ -117,7 +117,8 @@
                     <i class="align-middle me-2 fas fa-fw fa-check-square"></i> <span class="align-middle">Stock</span>
                 </a>
                 <ul id="stocks" class="sidebar-dropdown list-unstyled collapse " data-bs-parent="#sidebar">
-                    <li class="sidebar-item"><a class="sidebar-link" href="forms-layouts.html">list</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="{{route('stocks.index')}}">List</a></li>
+                    <li class="sidebar-item"><a class="sidebar-link" href="{{route('stocks.create')}}">Add</a></li>
 
                 </ul>
             </li>

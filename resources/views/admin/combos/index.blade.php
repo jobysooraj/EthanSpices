@@ -88,7 +88,7 @@
                              
                              <tr>
                                 <th>Gst </th>
-                                <td id="gst_amount">Matrix Interior Design</td>
+                                <td id="gst_amount">%</td>
                             </tr>
                            
                              <tr>

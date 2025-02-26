@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Combo;
 use App\Models\Product;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
+
 
 class ComboController extends Controller
 {
@@ -155,8 +157,9 @@ class ComboController extends Controller
         ];
         $gstTaxes   = $this->gstService->getAllGstTaxes();
         $products   = $this->productService->getAllProducts();
-        $units      = $this->unitService->getAllUnits();
-        return view('admin.combos.edit', compact('combo','breadcrumbs','gstTaxes','products','units'));
+        $selectedProducts = $combo->products->pluck('id')->toArray();
+
+        return view('admin.combos.edit', compact('combo','breadcrumbs','gstTaxes','products','selectedProducts'));
 
     }
 
@@ -170,6 +173,9 @@ class ComboController extends Controller
             $data = $request->validated();
 
             if ($request->hasFile('image')) {
+                if ($combo->image) {
+                    Storage::disk('public')->delete($combo->image);
+                }
                 $file           = $request->file('image');
                 $filename       = time() . '.' . $file->getClientOriginalExtension();
                 $filePath       = $file->storeAs('combos', $filename, 'public');
@@ -177,11 +183,13 @@ class ComboController extends Controller
             }
 
             $this->comboService->updateCombo($combo->id, $data);
+            $productIds = $request->product_id; // This is an array of product IDs
+            $combo->products()->sync($productIds);
             DB::commit();
             return redirect()->route('combos.index')->with('success', 'Combo updated successfully!');
         } catch (\Exception $e) {
             DB::rollBack();
-            Log::error('Combo update failed: ' . $e->getMessage());
+           dd($e->getMessage());
             return redirect()->back()->withErrors('Error updating Combo. Please try again.');
         }
 

@@ -29,7 +29,7 @@ Route::middleware(['auth', 'user-access:Admin','NoBackAfterLogout'])->group(func
   
     Route::get('/admin/home', [DashboardController::class, 'index'])->name('admin.home');
     Route::resource('categories', CategoryController::class);
-    Route::get('/get-products/{category}', [CategoryController::class, 'getProducts']);
+    Route::get('/categories/{category}/products', [CategoryController::class, 'getProducts']);
 
     Route::resource('products', ProductController::class);
     Route::resource('taxes', TaxController::class);
